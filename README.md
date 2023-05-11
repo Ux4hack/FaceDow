@@ -18,15 +18,12 @@
   </p>
 
 <h1 align="center"> [ FaceDow ]  </h1>
-Descarga videos de la plataforma Facebook rapido y facil desde termux con FaceDow
 
----
+Descarga videos de la plataforma Facebook rapido y facil desde termux con FaceDow
 
 <p align="center">
 <img width="80%" src="https://github.com/Ux4hack/FaceDow/blob/images/FaceDow.png" />
 </p>
-
----
 
 <h2 align="center"> 🛠️ Instalación >_ 🛠️ </h2>
 
