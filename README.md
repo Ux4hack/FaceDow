@@ -41,4 +41,4 @@ Descarga videos de la plataforma Facebook rapido y facil desde termux con FaceDo
 
 [![chat](https://img.shields.io/badge/TELEGRAM-CHAT-green?style=for-the-badge&logo=telegram)](https://t.me/Ux4hack)
 
-> NOTA FINAL: De momento no es posible descargar Reels e historias pero apóya la herramienta con una "⭐" para añadir opcion. 
+> NOTA FINAL: FaceDow no es capás de descargar algunos Reels especiales ni historias.
