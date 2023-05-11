@@ -23,7 +23,7 @@ Descarga videos de la plataforma Facebook rapido y facil desde termux con FaceDo
 ---
 
 <p align="center">
-<img width="80%" src="https://github.com/Ux4hack/FaceDow/blob/images/FaceDow.png"/>
+<img width="80%" src="https://github.com/Ux4hack/FaceDow/blob/images/FaceDow.png" />
 </p>
 
 ---
