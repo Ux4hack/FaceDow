@@ -1,0 +1,78 @@
+#!/bin/bash
+#
+# FaceDow
+# Facebook - Video - Downloader
+# Autor: Ux4hack
+# Datos: 10/05/2023 - 11/05/2023
+# Open source √
+#
+# ==============================================
+G="\e[0;32m\033[1m"
+R="\e[1;31m"
+RED="\e[101m"
+green='\e[32m'
+W="\033[0m"
+GR='\033[90m'
+BL="\e[44m"
+WI="\e[107m"
+B="\e[0;34m\033[1m"
+trap ctrl_c 2
+ctrl_c() {
+echo
+echo
+echo -e "${GR}[${R}*${GR}]     ${W}${R}${WI}:: FaceDow Finalizado :: ${W}"
+echo -e "${GR}[${R}*${GR}] ${B}${WI}Desarrollador :: ${W} ${W}Ux4hack"
+echo -e "${GR}[${R}*${GR}] ${B}${WI}Telegram :: ${W} t.me/Ux4hack"
+echo -e "${GR}[${R}*${GR}] ${B}${WI}Github :: ${W} github.com/Ux4hack"
+echo
+exit
+}
+directorio="/storage/emulated/0/FaceDow/"
+if [ ! -d "$directorio" ]; then
+  mkdir "$directorio"
+fi
+function snake_animation() {
+    local text=$1
+    local delay=$2
+    local spin='-\|/'
+
+    while true; do
+        for i in $(seq 0 $((${#text} - 1))); do
+            echo -ne "\r${spin:i:1} ${text:$i}${text:0:$i}"
+            sleep $delay
+        done
+    done
+}
+banner (){
+  clear;cat images/x
+  echo -e "  	   ${W}${B}${WI} :: FaceDow :: ${W}"
+  echo -e "     ${GR}[ Facebook Video Downloader ]${W}"
+  echo -e "          ${GR}Developer: ${R}@Ux4hack${W}"
+  echo
+}
+if ! command -v youtube-dl &> /dev/null; then
+pip install youtube-dl
+  exit 1
+fi
+banner
+   echo -ne "${B}${WI} ::Link:: ${W} ${R}"
+read video_link
+if [ -z "${video_link}" ]; then
+	banner;exit
+fi
+pid=$!
+snake_animation "\e[90m Descargando video..." 0.1 &
+youtube-dl -o "%(title)s.%(ext)s" "$video_link" > /dev/null 2>/dev/null
+   cp *.mp4 /storage/emulated/0/FaceDow/; rm -rf *.mp4 > /dev/null
+sleep 10
+kill $!
+banner
+sleep 1
+   echo -e "       ${W}${B}${WI} :: ¡Video Descargado! :: ${W}"
+   echo -e "          ${R}      [${W} RUTA${R} ]${W}"
+   echo
+   echo -e "${GR}[${B}*${GR}]${R} /sdcard/0/FaceDow"
+   echo;exit 1
+# ==============================================
+#
+# I am Ux4hack
